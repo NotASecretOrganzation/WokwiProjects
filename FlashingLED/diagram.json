@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Raymond Lei",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -72.85,
+      "left": 19.2,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -109.2,
+      "left": -53.8,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "uno:13", "r1:2", "green", [ "v-47.4", "h-57.8" ] ],
+    [ "r1:1", "led1:A", "green", [ "v0" ] ],
+    [ "led1:C", "uno:GND.1", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
